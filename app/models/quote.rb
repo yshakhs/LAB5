@@ -1,9 +1,11 @@
 class Quote < ApplicationRecord
     # Method to   get   a random quote for home page  #  
     #
+    validates_presence_of :body  
+    validates_presence_of :source
+    def self.get_random_quote  
+       self.all.sample
+   end 
      @return [Quote]
      #   the random quote 
-     def self.get_random_quote  
-        self.all.sample
-    end 
 end
