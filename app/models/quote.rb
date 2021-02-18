@@ -6,6 +6,7 @@ class Quote < ApplicationRecord
     def self.get_random_quote  
        self.all.sample
    end 
-     @return [Quote]
+
+   
      #   the random quote 
 end
